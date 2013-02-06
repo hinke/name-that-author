@@ -32,7 +32,7 @@ DataMapper.finalize
 DataMapper::Logger.new($stdout, :debug)
 
 configure do
-  DataMapper.setup(:default, (ENV["DATABASE_URL"] || {
+  DataMapper.setup(:default, (ENV["CLEARDB_DATABASE_URL"] || {
     :adapter  => 'mysql',
     :host     => 'localhost',
     :username => 'root' ,
