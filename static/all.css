@@ -231,13 +231,13 @@ body, html {
     height: 100%;
     margin-right: 0;
     position: relative;
-    padding-top: 110px;
+    padding-top: 69px;
     text-align: center; }
     @media screen and (max-width: 570px) {
       /* line 308, all.scss */
       .game-over .col1 {
         padding-top: 30px;
-        padding-bottom: 69px;
+        padding-bottom: 28px;
         position: relative;
         height: auto; } }
     @media screen and (max-width: 570px) {
@@ -251,18 +251,25 @@ body, html {
       margin-bottom: 20px; }
     /* line 335, all.scss */
     .game-over .col1 h3 {
-      margin-bottom: 40px; }
+      margin-bottom: 31px; }
     /* line 339, all.scss */
     .game-over .col1 .tweet {
-      margin-top: 70px; }
-      /* line 342, all.scss */
+      margin-top: 70px;
+      border-top: 1px solid #383536;
+      padding-top: 40px; }
+      @media screen and (max-width: 570px) {
+        /* line 339, all.scss */
+        .game-over .col1 .tweet {
+          margin-top: 59px;
+          padding-top: 20px; } }
+      /* line 349, all.scss */
       .game-over .col1 .tweet h3 {
         margin-bottom: 10px; }
-    /* line 347, all.scss */
+    /* line 354, all.scss */
     .game-over .col1 .arrow-down {
       visibility: hidden; }
       @media screen and (max-width: 570px) {
-        /* line 347, all.scss */
+        /* line 354, all.scss */
         .game-over .col1 .arrow-down {
           width: 0;
           height: 0;
@@ -271,10 +278,10 @@ body, html {
           border-top: 10px solid #231f20;
           margin: 0 auto;
           position: relative;
-          top: 78px;
+          top: 37px;
           z-index: 999;
           visibility: visible; } }
-  /* line 368, all.scss */
+  /* line 375, all.scss */
   .game-over .col2 {
     background-color: whitesmoke;
     width: 40%;
@@ -286,35 +293,35 @@ body, html {
     padding-top: 90px;
     height: 100%; }
     @media screen and (max-width: 570px) {
-      /* line 368, all.scss */
+      /* line 375, all.scss */
       .game-over .col2 {
         padding: 20px;
         height: auto;
         padding-top: 50px;
-        padding-bottom: 50px; } }
-    /* line 390, all.scss */
+        padding-bottom: 70px; } }
+    /* line 397, all.scss */
     .game-over .col2 h2 {
       margin-top: 30px; }
       @media screen and (max-width: 570px) {
-        /* line 390, all.scss */
+        /* line 397, all.scss */
         .game-over .col2 h2 {
           margin-top: 25px; } }
-    /* line 398, all.scss */
+    /* line 405, all.scss */
     .game-over .col2 h3 {
       margin-bottom: 23px;
       color: gray;
       font-family: ScalaWebPro-Ita;
       margin-bottom: 30px; }
       @media screen and (max-width: 570px) {
-        /* line 398, all.scss */
+        /* line 405, all.scss */
         .game-over .col2 h3 {
           margin-bottom: 38px; } }
-    /* line 410, all.scss */
+    /* line 417, all.scss */
     .game-over .col2 img {
       width: 60%;
       border-bottom: 1px solid #e8e8e8;
       margin-top: -12px; }
-    /* line 416, all.scss */
+    /* line 423, all.scss */
     .game-over .col2 .read-more {
       background: #70B22D;
       padding: 9px 40px 13px;
@@ -322,10 +329,10 @@ body, html {
       color: whitesmoke;
       text-decoration: none;
       border-radius: 2px; }
-    /* line 426, all.scss */
+    /* line 433, all.scss */
     .game-over .col2 .read-more:hover {
       opacity: 0.8; }
-  /* line 432, all.scss */
+  /* line 439, all.scss */
   .game-over .play-again {
     background: whitesmoke;
     padding: 9px 40px 13px;
@@ -335,7 +342,7 @@ body, html {
     -moz-box-shadow: 2px 2px 0 #231f20, 3px 3px 0 whitesmoke, 5px 5px 0 #231f20, 6px 6px 0 whitesmoke;
     -webkit-box-shadow: 2px 2px 0 #231f20, 3px 3px 0 whitesmoke, 5px 5px 0 #231f20, 6px 6px 0 whitesmoke;
     box-shadow: 2px 2px 0 #231f20, 3px 3px 0 whitesmoke, 5px 5px 0 #231f20, 6px 6px 0 whitesmoke; }
-  /* line 456, all.scss */
+  /* line 463, all.scss */
   .game-over .play-again:hover {
     background: #ead468;
     -moz-box-shadow: 2px 2px 0 #231f20, 3px 3px 0 #ead468, 5px 5px 0 #231f20, 6px 6px 0 #ead468;
