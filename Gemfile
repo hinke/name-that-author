@@ -10,6 +10,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
-  gem 'dm-postgres-adapter'
+  gem 'mysql2'
+  gem 'dm-mysql-adapter'
 end
