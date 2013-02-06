@@ -48,9 +48,14 @@ get '/' do
   if score && !score.empty? && score.split(',').size == 11
     redirect "/finish"
   else
-    @quote = Quote.first(:offset => rand(3))
-    @win = @quote.book
-    @lose = Book.first(:id.not => @win.id, :offset => rand(2))
+    @result = 0
+    score.split(',').each { |r| @result += r.to_i } if score && !score.empty?
+
+    @quote = Quote.first(:offset => rand(28))
+    win = @quote.book
+    lose = Book.first(:id.not => win.id, :offset => rand(27))
+
+    @choices = [win, lose].shuffle
 
     erb :quote
   end
