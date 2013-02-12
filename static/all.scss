@@ -1,0 +1,491 @@
+// To auto compile this scss file -- Run the following command in terminal
+// sass --watch static/all.scss:static/all.css
+
+
+@charset "utf-8";
+
+$break-small: 620px;
+$break-large: 1200px;
+$bg-color: #231F20;
+$text-color: #f5f5f5;
+$hover: #EAD468;
+
+// Media query example
+//
+// .profile-pic {
+//   float: left;
+//   width: 250px;
+//   @media screen and (max-width: $break-small) {
+//     width: 100px;
+//     float: none;
+//   }
+//   @media screen and (min-width: $break-large) {
+//     float: right;
+//   }
+// }
+
+
+/* first for IE 4–8 */
+@font-face {
+  font-family: ScalaWebPro;
+  src: url("../fonts/ScalaWebPro.eot");
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+  font-family: ScalaWebPro;
+  src: url("../fonts/ScalaWebPro.woff") format("woff");
+}
+
+/* first for IE 4–8 */
+@font-face {
+  font-family: ScalaSansScWebPro;
+  src: url("../fonts/ScalaSansScWebPro.eot");
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+  font-family: ScalaSansScWebPro;
+  src: url("../fonts/ScalaSansScWebPro.woff") format("woff");
+}
+
+/* first for IE 4–8 */
+@font-face {
+  font-family: ScalaWebPro-Ita;
+  src: url("../fonts/ScalaWebPro-Ita.eot");
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+  font-family: ScalaWebPro-Ita;
+  src: url("../fonts/ScalaWebPro-Ita.woff") format("woff");
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  background: $bg-color; 
+  color: $text-color;
+  font-family: serif;
+  font-size: 20px;
+}
+
+.fontface body {
+ font-family: ScalaWebPro, serif;
+ -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+h2 {
+  font-size:40px;
+  margin-top: 60px;
+
+  span {
+    border-bottom: 1px solid #fff;
+  }
+
+  @media screen and (max-width: $break-small) {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+}
+
+.italic {
+  color: #999;
+}
+
+.fontface .italic {
+  font-family: ScalaWebPro-Ita, serif;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrap {
+  max-width: $break-large;
+  margin: 0 auto;
+  padding:0 20px 40px 20px;
+
+}
+
+
+.col1, .col2 {
+
+  float:left;
+  padding: 40px 0px 0px;
+
+  @media screen and (max-width: $break-small) {
+    width: 100% !important;
+    float: none;
+    padding-top: 20px;
+  }
+}
+
+.col1 {
+  width:75%;
+  margin-right: 5%;
+
+}
+
+.col2 {
+  width: 20%;
+
+  @media screen and (max-width: $break-small) {
+    margin-top: 0;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.book {
+  max-width: 150px;
+  @media screen and (max-width: $break-small) {
+    width: 38%;
+  }
+}
+
+.or {
+  margin:108px 4%;
+
+  @media screen and (max-width: $break-small) {
+    margin:70px 6%;
+    padding-left: 6px;
+  }
+}
+
+img { max-width: 100%; height: auto; }
+
+.book img {
+  border:1px solid #fff;
+}
+
+
+.boxshadow .book img {
+  -moz-box-shadow:
+    2px 2px 0 $bg-color,
+    3px 3px 0 $text-color,
+    5px 5px 0 $bg-color,
+    6px 6px 0 $text-color;
+  -webkit-box-shadow:
+    2px 2px 0 $bg-color,
+    3px 3px 0 $text-color,
+    5px 5px 0 $bg-color,
+    6px 6px 0 $text-color;
+  box-shadow:
+    2px 2px 0 $bg-color,
+    3px 3px 0 $text-color,
+    5px 5px 0 $bg-color,
+    6px 6px 0 $text-color;
+}
+
+.boxshadow .book:hover img {
+  //opacity: .8;
+  background:#fff;
+  border: 1px solid $hover;
+  -moz-box-shadow:
+    2px 2px 0 $bg-color,
+    3px 3px 0 $hover,
+    5px 5px 0 $bg-color,
+    6px 6px 0 $hover;
+  -webkit-box-shadow:
+    2px 2px 0 $bg-color,
+    3px 3px 0 $hover,
+    5px 5px 0 $bg-color,
+    6px 6px 0 $hover;
+  box-shadow:
+    2px 2px 0 $bg-color,
+    3px 3px 0 $hover,
+    5px 5px 0 $bg-color,
+    6px 6px 0 $hover;
+}
+
+.book a {
+  text-decoration: none;
+  color: $text-color;
+
+  @media screen and (max-width: $break-small) {
+    //text-decoration: underline;
+  }
+
+}
+
+.book:hover a {
+  //text-decoration:underline;
+}
+
+.book a .italic {
+  color:#999;
+}
+
+.book p {
+  @media screen and (max-width: $break-small) {
+    font-size: 14px;
+  }
+}
+
+.borderradius .meta  {
+  border-radius: 3px;
+}
+
+.flash {
+  border:transparent;
+  margin-bottom:10px;
+}
+
+.meta {
+  width: 100%;
+  text-align: center;
+  border:1px solid #383536;
+  padding:30px;
+
+  .score {
+    border-bottom: 1px solid #383536;
+    padding: 0 0 30px;
+    margin-bottom: 30px;
+
+    .points {
+      font-family: ScalaSansScWebPro;
+      font-size: 40px;
+      line-height: .5;
+    }
+
+    .small-caps {
+      font-family: ScalaSansScWebPro;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  .cheer {
+    
+  }
+
+  .social {
+    padding:30px 0;
+  }
+
+}
+
+body.index {
+  height: auto;
+}
+
+body, html {
+  height: 100%;
+}
+
+.game-over {
+
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size:20px;
+    margin-bottom:60px;
+    font-family: ScalaWebPro-Ita;
+    margin-bottom:40px;
+  }
+
+
+
+
+
+  .col1 {
+    width: 60%;
+    height: 100%;
+    margin-right: 0;
+    position: relative;
+    padding-top: 69px;
+    text-align: center;
+
+    @media screen and (max-width: $break-small) {
+      padding-top: 30px;
+      padding-bottom: 28px;
+      position: relative;
+      height: auto;
+    }
+
+    img {
+      @media screen and (max-width: $break-small) {
+        width: 75px;
+        height: auto;
+      }
+    }
+
+    h2 {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 31px;
+    }
+
+    .tweet {
+      margin-top: 70px;
+      border-top: 1px solid #383536;
+      padding-top: 40px;
+
+      @media screen and (max-width:$break-small) {
+        margin-top: 59px;
+        padding-top: 20px;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+
+    .arrow-down {
+      visibility: hidden;
+
+      @media screen and (max-width: $break-small) {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $bg-color;
+        margin: 0 auto;
+        position: relative;
+        top: 37px;
+        z-index: 999;
+        visibility: visible;
+      }
+
+    }
+
+
+  }
+
+  .col2 {
+    
+    background-color: $text-color;
+    width: 40%;
+    text-align: center;
+    color: $bg-color;
+    overflow: hidden;
+    position: relative;
+    padding:40px;
+    padding-top: 90px;
+    height: 100%;
+
+    @media screen and (max-width: $break-small) {
+      
+      padding:20px;
+      height: auto;
+      padding-top: 50px;
+      padding-bottom: 70px;
+    }
+
+
+
+    h2 {
+      margin-top: 30px;
+
+      @media screen and (max-width: $break-small) {
+        margin-top: 25px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 23px;
+      color: gray;
+      font-family: ScalaWebPro-Ita;
+      margin-bottom:30px;
+
+      @media screen and (max-width: $break-small) {
+        margin-bottom: 38px;
+      }
+
+    }
+
+    img {
+      width: 60%;
+      border-bottom: 1px solid #e8e8e8;
+      margin-top: -12px;
+    }
+
+    .read-more {
+      background:#70B22D;
+      padding:9px 40px 13px;
+      font-family: ScalaSansScWebPro;
+      color: $text-color;
+      text-decoration: none;
+      border-radius: 2px;
+
+    }
+
+    .read-more:hover {
+      opacity: 0.8;
+    }
+
+  }
+
+  .play-again {
+    background:$text-color;
+    padding:9px 40px 13px;
+    font-family: ScalaSansScWebPro;
+    color: $bg-color;
+    text-decoration: none;
+
+      -moz-box-shadow:
+        2px 2px 0 $bg-color,
+        3px 3px 0 $text-color,
+        5px 5px 0 $bg-color,
+        6px 6px 0 $text-color;
+      -webkit-box-shadow:
+        2px 2px 0 $bg-color,
+        3px 3px 0 $text-color,
+        5px 5px 0 $bg-color,
+        6px 6px 0 $text-color;
+      box-shadow:
+        2px 2px 0 $bg-color,
+        3px 3px 0 $text-color,
+        5px 5px 0 $bg-color,
+        6px 6px 0 $text-color;
+  }
+
+  .play-again:hover {
+    background:$hover;
+    -moz-box-shadow:
+      2px 2px 0 $bg-color,
+      3px 3px 0 $hover,
+      5px 5px 0 $bg-color,
+      6px 6px 0 $hover;
+    -webkit-box-shadow:
+      2px 2px 0 $bg-color,
+      3px 3px 0 $hover,
+      5px 5px 0 $bg-color,
+      6px 6px 0 $hover;
+    box-shadow:
+      2px 2px 0 $bg-color,
+      3px 3px 0 $hover,
+      5px 5px 0 $bg-color,
+      6px 6px 0 $hover;
+  }
+
+
+}
+
+
+
