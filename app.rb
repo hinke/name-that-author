@@ -57,8 +57,9 @@ get '/' do
 
     @choices = [win, lose].shuffle
 
-    puts "0: #{@choices[0].book.id}"
-    puts "1: #{@choices[1].book.id}"
+    puts "0: #{@choices[0].id}"
+    puts "1: #{@choices[1].id}"
+    puts "Quote #{@quote.book.id}"
 
     erb :quote
   end
