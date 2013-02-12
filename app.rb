@@ -88,6 +88,30 @@ get '/restart' do
   redirect "/"
 end
 
+get '/admin/add' do
+  erb :add_quote
+end
+
+post '/admin/add' do
+  quote = params[:quote]
+  title = params[:title]
+  author = params[:author]
+  cover_url = params[:cover_url]
+
+  if Quote.first(:quote => quote).nil?
+      book = Book.first_or_create({ :title => title, :author => author})
+      book.cover_url = cover_url
+      book.save!
+      book.reload
+
+      Quote.create!(:book_id => book.id, :quote => quote)
+      redirect "/admin/add?s=1"
+  else
+      redirect "/admin/add?s=0"    
+  end
+
+end
+
 get('/static/:filename') { send_file("./static/#{params[:filename]}") }
 get('/fonts/:filename') { send_file("./fonts/#{params[:filename]}") }
 

@@ -1,0 +1,13 @@
+	<%= 
+	unless params[:s].nil?
+		params[:s].eql?('1') ? "Added quote!" : 'Add failed' 
+	end
+	%>
+
+	<form method="post" action="/admin/add">
+		<input type="text" name="quote" value="Quote">
+		<input type="text" name="title" value="Title">
+		<input type="text" name="author" value="Author">
+		<input type="text" name="cover_url" value="url to cover"></br>
+		<input type="submit" value="Add this quote">
+	</form>
