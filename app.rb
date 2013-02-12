@@ -89,10 +89,14 @@ get '/restart' do
 end
 
 get '/admin/add' do
+  @quote_size = Quote.all.count
+  @book_size = Book.all.count
+
   erb :add_quote
 end
 
 post '/admin/add' do
+
   quote = params[:quote]
   title = params[:title]
   author = params[:author]
