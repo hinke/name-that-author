@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 /* first for IE 4–8 */
 @font-face {
@@ -287,4 +286,23 @@ body, html {
     -moz-box-shadow: 2px 2px 0 #231f20, 3px 3px 0 #ead468, 5px 5px 0 #231f20, 6px 6px 0 #ead468;
     -webkit-box-shadow: 2px 2px 0 #231f20, 3px 3px 0 #ead468, 5px 5px 0 #231f20, 6px 6px 0 #ead468;
     box-shadow: 2px 2px 0 #231f20, 3px 3px 0 #ead468, 5px 5px 0 #231f20, 6px 6px 0 #ead468; }
->>>>>>> alex
+
+form input[type=text], form textarea {
+  margin-bottom: 1em;
+  background: transparent;
+  border: 1px solid #666666;
+  color: #ccc;
+  padding: 8px 9px;
+  border-radius: 3px; }
+
+form input[type=submit] {
+  padding: 9px;
+  border: none;
+  border-radius: 3px; }
+
+form input[type=submit]:hover {
+  opacity: 0.8; }
+
+form input[type=submit]:active {
+  position: relative;
+  top: 1px; }

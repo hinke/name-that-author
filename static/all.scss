@@ -483,8 +483,30 @@ body, html {
       5px 5px 0 $bg-color,
       6px 6px 0 $hover;
   }
+}
 
+form input[type=text], form textarea {
+  margin-bottom:1em;
+  background:transparent;
+  border: 1px solid #666;
+  color: #ccc;
+  padding: 8px 9px;
+  border-radius: 3px;
+}
 
+form input[type=submit] {
+  padding:9px;
+  border:none;
+  border-radius: 3px;
+}
+
+form input[type=submit]:hover {
+  opacity: 0.8
+}
+
+form input[type=submit]:active {
+  position: relative;
+  top: 1px;
 }
 
 
