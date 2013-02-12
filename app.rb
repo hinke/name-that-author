@@ -102,7 +102,7 @@ post '/admin/add' do
   author = params[:author]
   cover_url = params[:cover_url]
 
-  if Quote.first(:quote => quote).nil?
+  if Quote.first(:quote => quote).nil? && !quote.empty? && !title.empty? && !author.empty? && !cover_url.empty?
       book = Book.first_or_create({ :title => title, :author => author})
       book.cover_url = cover_url
       book.save!
