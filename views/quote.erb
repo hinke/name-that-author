@@ -39,7 +39,7 @@
     <div class="wrap group">
   <div class="col1 group">
     <h1 class="italic">Name that author!</h1>
-    <h2><%= @quote.quote %></h2>
+    <h2>&#8220;<%= @quote.quote %>&#8221;</h2>
     <div class="book book1 left">
       <a href="/r?r=<%= @choices[0].id == @quote.book.id ? 1 : 0 %>"><img src="<%= @choices[0].cover_url %>"></a>
       <a href="/r?r=<%= @choices[0].id == @quote.book.id ? 1 : 0 %>"><p><%= @choices[0].title %><br><span class="italic"><%= @choices[0].author %></span></p></a>
