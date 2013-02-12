@@ -51,11 +51,14 @@ get '/' do
     @result = 0
     score.split(',').each { |r| @result += r.to_i } if score && !score.empty?
 
-    @quote = Quote.first(:offset => rand(Quote.all.count-1))
+    @quote = Quote.first(:offset => rand(Quote.all.count))
     win = @quote.book
-    lose = Book.first(:id.not => win.id, :offset => rand(Quote.all.count-2))
+    lose = Book.first(:id.not => win.id, :offset => rand(Quote.all.count-1))
 
     @choices = [win, lose].shuffle
+
+    puts "0: #{@choices[0].book.id}"
+    puts "1: #{@choices[1].book.id}"
 
     erb :quote
   end
